@@ -96,6 +96,8 @@ $estado = $_GET['estado'] ?? '';
                         type="number"
                         id="cantidad"
                         name="cantidad"
+                        nim="1"
+                        step="1"
                         placeholder="Ejemplo: 10"
                         required
                     >
