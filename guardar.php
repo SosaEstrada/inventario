@@ -15,6 +15,11 @@ if ($nombre === '' || $cantidad === '') {
     exit;
 }
 
+if (preg_match_all('/./us', $nombre) < 4) {
+    header('Location: index.php?estado=nombre_corto');
+    exit;
+}
+
 if (!is_numeric($cantidad)) {
     header('Location: index.php?estado=cantidad_invalida');
     exit;
