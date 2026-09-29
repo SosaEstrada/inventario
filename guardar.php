@@ -15,10 +15,11 @@ if ($nombre === '' || $cantidad === '') {
     exit;
 }
 
-if (!is_numeric($cantidad)) {
-    header('Location: index.php?estado=cantidad_invalida');
+if (filter_var($cantidad, FILTER_VALIDATE_INT) === false || (int) $cantidad < 1) {
+    header('Location: index.php?estado=cantidad_mayor_a_cero');
     exit;
 }
+
 
 $sentencia = $conexion->prepare(
     'INSERT INTO productos (nombre, cantidad)
