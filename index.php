@@ -158,7 +158,7 @@ $estado = $_GET['estado'] ?? '';
                                 </td>
 
                                 <td>
-                                    <?php if ($producto['cantidad'] > 0): ?>
+                                    <?php if ($producto['cantidad'] > 1): ?>
                                         <span class="estado disponible">
                                             Disponible
                                         </span>
