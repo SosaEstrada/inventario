@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../src/Validaciones.php';
+require_once __DIR__ . '/../src/validaciones.php';
 
 $casos = [
     ["Teclado", true],
