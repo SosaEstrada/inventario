@@ -1,4 +1,3 @@
-
 <?php
 
 function validarNombreProducto(string $nombre): bool
@@ -9,12 +8,8 @@ function validarNombreProducto(string $nombre): bool
         && mb_strlen($nombre, 'UTF-8') <= 50;
 }
 
-function validarCantidadProducto($cantidad): bool
+function validarCantidadProducto(int|string $cantidad): bool
 {
-    if (!is_int($cantidad) && !is_string($cantidad)) {
-        return false;
-    }
-
     return filter_var(
         $cantidad,
         FILTER_VALIDATE_INT,
